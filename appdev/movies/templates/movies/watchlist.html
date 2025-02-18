@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Watchlist</title>
+</head>
+<body>
+    <h1>Your Watchlist</h1>
+    <ul>
+        {% for watchlist_item in object_list %}
+            <li>{{ watchlist_item.movie.title }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'movie-list' %}">Back to Movie List</a>
+</body>
+</html>
